@@ -1,11 +1,5 @@
 var initial_date = new Date(2020, 9, 24, 8, 30, 0, 0);
 var finish_date = new Date(2021, 2, 31, 0, 0, 0, 0);
-
-function now() {
-    let now = Date.now();
-    return now;
-}
-
 var bg_arr = {
     0: 'bcg/1.jpg',
     1: 'bcg/2.jpg',
@@ -16,6 +10,18 @@ var bg_arr = {
     6: 'bcg/7.jpg',
     7: 'bcg/8.jpg'
 };
+var quotes = {
+    0: "Я внезапно подумал, что неправильное произношение названия города сделает меня крутым",
+    1: "Сравню-ка Фельдшлёсхен там и тут",
+    3: "Byyyyystro blyat'",
+    4: "Наконец-то смогу выйти на улицу!",
+    5: "Че, сядем 1 апреля?",
+}
+
+function now() {
+    let now = Date.now();
+    return now;
+}
 
 function date_count() {
     let result = +finish_date - now();
