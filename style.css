@@ -72,3 +72,25 @@ html {
 .diman:hover .quote {
     display: inline-block;
 }
+
+.divan {
+    background-image: url("img/divan.png");
+    height: 100px;
+    width: 150px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    bottom: 325px;
+    left: 830px;
+}
+
+.leipzig {
+     background-image: url(img/leipziz.jpg);
+     height: 150px;
+     width: auto;
+     background-repeat: no-repeat;
+     background-size: contain;
+     position: relative;
+     bottom: 202px;
+     left: -235px;
+}
