@@ -13,10 +13,20 @@ var bg_arr = {
 var quotes = {
     0: "Я внезапно подумал, что неправильное произношение названия города сделает меня крутым",
     1: "Сравню-ка Фельдшлёсхен там и тут",
-    3: "Byyyyystro blyat'",
-    4: "Наконец-то смогу выйти на улицу!",
-    5: "Че, сядем 1 апреля?",
-}
+    2: "Byyyyystro blyat'",
+    3: "Наконец-то смогу выйти на улицу!",
+    4: "Че, сядем 1 апреля?",
+    5: "Кальян помыли?",
+};
+document.addEventListener('DOMContentLoaded', function () {
+    let dima = document.getElementById('dim');
+    dima.addEventListener('mouseover', function () {
+        let quote_id = Math.floor(Math.random() * 6);
+        let quote = quotes[quote_id];
+        document.getElementById('quote').innerHTML = quote;
+    })
+
+})
 
 function now() {
     let now = Date.now();
@@ -95,7 +105,6 @@ function day_word(n) {
 
 function hrs_word(n) {
     let num = Math.trunc(n);
-
     switch (num) {
         case 1:
         case 21:
@@ -110,7 +119,7 @@ function hrs_word(n) {
             return 'часа';
             break;
 
-        default
+        default:
             return 'часов';
             break;
     }
@@ -154,7 +163,6 @@ function sixty_word(n, first, second, third) {
 
 //TODO поправить проценты
 //TODO Добавить город и Диван
-//TODO Добавить цитаты
 //TODO Добавить ссылку на гит
 //TODO Настроить шрифт
 //TODO Опционально медиа-запросы
