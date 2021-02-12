@@ -24,9 +24,9 @@ function date_count() {
     let hours = (result - (Math.trunc(days) * (1000 * 60 * 60 * 24))) / 3600000;
     let hours_word = hrs_word(hours);
     let mins = (result - (Math.trunc(days) * (1000 * 60 * 60 * 24)) - (Math.trunc(hours) * (1000 * 60 * 60))) / 60000;
-    let mins_word = sixty_word(mins,'минута','минуты','минут');
+    let mins_word = sixty_word(mins, 'минута', 'минуты', 'минут');
     let sec = (result - (Math.trunc(days) * (1000 * 60 * 60 * 24)) - (Math.trunc(hours) * (1000 * 60 * 60)) - (Math.trunc(mins) * (1000 * 60))) / 1000;
-    let sec_word = sixty_word(sec,'секунда','секунды','секунд')
+    let sec_word = sixty_word(sec, 'секунда', 'секунды', 'секунд')
     document.getElementById('result').innerHTML = `До приезда Димана осталось <br> ${Math.trunc(days)} ${days_word}, 
 ${Math.trunc(hours)} ${hours_word} и ${Math.trunc(mins)} ${mins_word} и ${Math.trunc(sec)} ${sec_word}!`;
     count_percent();
@@ -104,12 +104,13 @@ function hrs_word(n) {
             return 'часа';
             break;
 
-            default return 'часов';
+        default
+            return 'часов';
             break;
     }
 }
 
-function sixty_word (n,first,second,third) {
+function sixty_word(n, first, second, third) {
     let num = Math.trunc(n);
 
     switch (num) {
@@ -138,7 +139,8 @@ function sixty_word (n,first,second,third) {
             return second; //минуты/секунды
             break;
 
-        default: return third; // минут/секунд
+        default:
+            return third; // минут/секунд
 
     }
 }

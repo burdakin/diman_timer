@@ -1,6 +1,6 @@
 :root {
     --diman: = 0%;
-    --bcg = '' ;
+    --bcg = '';
 }
 
 html {
@@ -8,16 +8,16 @@ html {
 }
 
 .bg {
-     background-image: var(--bcg);
-     background-size: cover;
-     background-repeat: no-repeat;
-     background-position: center;
-     position: absolute;
-     top: 00px;
-     width: 100%;
-     height: 100%;
-     z-index: -1;
-     opacity: 45%;
+    background-image: var(--bcg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 00px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 45%;
 }
 
 
