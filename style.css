@@ -43,9 +43,8 @@ html {
     background-color: #CDDC39;
     border-radius: 25px;
     border: 5px solid #212121;
-    position: relative;
-    top: 400px;
     margin: 0 auto;
+    margin-top: 30%;
 }
 
 .diman {
