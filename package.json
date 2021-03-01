@@ -1,7 +1,7 @@
 {
-  "name": "my-static-site",
+  "name": "Diman Timer",
   "version": "1.0.0",
-  "description": "This will load any static html site",
+  "description": "This will load my app",
   "scripts": {
     "start": "harp server --port $PORT"
   },
