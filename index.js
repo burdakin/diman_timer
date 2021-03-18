@@ -1,5 +1,7 @@
-var initial_date = new Date(2020, 9, 24, 8, 30, 0, 0);
+var initial_date = new Date(2020, 9, 22, 9, 0, 0);
 var finish_date = new Date(2021, 2, 31, 0, 0, 0, 0);
+var bcg = setInterval(background, 5000);
+var count = setInterval(date_count, 1000);
 var bg_arr = {
     0: 'bcg/1.jpg',
     1: 'bcg/2.jpg',
@@ -35,22 +37,29 @@ function now() {
 
 function date_count() {
     let result = +finish_date - now();
-    let days = result / (1000 * 60 * 60 * 24);
-    let days_word = day_word(days);
-    let hours = (result - (Math.trunc(days) * (1000 * 60 * 60 * 24))) / 3600000;
-    let hours_word = hrs_word(hours);
-    let mins = (result - (Math.trunc(days) * (1000 * 60 * 60 * 24)) - (Math.trunc(hours) * (1000 * 60 * 60))) / 60000;
-    let mins_word = sixty_word(mins, 'минута', 'минуты', 'минут');
-    let sec = (result - (Math.trunc(days) * (1000 * 60 * 60 * 24)) - (Math.trunc(hours) * (1000 * 60 * 60)) - (Math.trunc(mins) * (1000 * 60))) / 1000;
-    let sec_word = sixty_word(sec, 'секунда', 'секунды', 'секунд')
-    document.getElementById('result').innerHTML = `До приезда Димана осталось <br> ${Math.trunc(days)} ${days_word}, 
+    if (result >= 0) {
+        let days = result / (1000 * 60 * 60 * 24);
+        let days_word = day_word(days);
+        let hours = (result - (Math.trunc(days) * (1000 * 60 * 60 * 24))) / 3600000;
+        let hours_word = hrs_word(hours);
+        let mins = (result - (Math.trunc(days) * (1000 * 60 * 60 * 24)) - (Math.trunc(hours) * (1000 * 60 * 60))) / 60000;
+        let mins_word = sixty_word(mins, 'минута', 'минуты', 'минут');
+        let sec = (result - (Math.trunc(days) * (1000 * 60 * 60 * 24)) - (Math.trunc(hours) * (1000 * 60 * 60)) - (Math.trunc(mins) * (1000 * 60))) / 1000;
+        let sec_word = sixty_word(sec, 'секунда', 'секунды', 'секунд')
+        document.getElementById('result').innerHTML = `До приезда Димана осталось <br> ${Math.trunc(days)} ${days_word}, 
 ${Math.trunc(hours)} ${hours_word} и ${Math.trunc(mins)} ${mins_word} и ${Math.trunc(sec)} ${sec_word}!`;
-    count_percent();
+        count_percent();
+    } else if (result <= 0) {
+        document.getElementById('result').innerHTML = 'Диман приехал и уже на диване!';
+        document.querySelector(':root').style.setProperty('--diman', '105%');
+        document.getElementById('quote').innerHTML = 'Я сел!';
+        clearInterval(count);
+    }
 }
 
 function render() {
-    setInterval(background, 5000);
-    setInterval(date_count, 1000);
+    bcg;
+    count;
 }
 
 function count_percent() {

@@ -1,3 +1,11 @@
+@media screen and (min-width: 200px) and (max-width: 500px) {
+    .content .result {
+        width: 80%;
+        font-size: 36px;
+        color: white;
+    }
+}
+
 :root {
     --diman: = 0%;
     --bcg = '';
@@ -6,6 +14,7 @@
 html {
     margin: 0;
     height: 100vh;
+    display: flex;
 }
 
 body {
@@ -13,6 +22,12 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.content {
+    flex: 1 0 auto;
 }
 
 .bg {
@@ -23,7 +38,7 @@ body {
     position: absolute;
     top: 00px;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     z-index: -1;
     opacity: 45%;
 }
@@ -33,7 +48,7 @@ body {
     color: #212121;
     font-size: 24px;
     text-align: center;
-    margin-top: 200px;
+    margin-top: 25vh;
     background-color: #009688;
 }
 
@@ -43,7 +58,7 @@ body {
     align-items: center;
     justify-content: space-around;
     margin: 0 auto;
-    margin-top: 35vh;
+    margin-top: 25vh;
 }
 
 .slidebar {
@@ -98,8 +113,43 @@ body {
     border-radius: 10px;
 }
 
-@media (max-height: 360px) and (orientation: landscape) {
-    .slider {
-        margin-top: 10vh;
+footer {
+    flex: 0 0 auto;
+    width: 100vw;
+    background-color: #00796B;
+    height: 12vh;
+}
+
+footer a {
+    float: right;
+    margin-right: 5%;
+    color: white;
+    font-size: 22px;
+    margin-top: 3vh;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+footer a:hover {
+    color: #CDDC39;
+    text-decoration: underline;
+}
+
+.git-img {
+    background-image: url("img/git.png");
+    width: 90px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media screen and (min-width: 200px) and (max-width: 500px) {
+    .content .result {
+        width: 80%;
+        font-size: 36px;
+        color: white;
     }
 }
