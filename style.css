@@ -141,8 +141,8 @@ footer a:hover {
 @media screen and (max-width: 425px) {
     .result {
         width: 85vw;
-        height: 17vh;
-        font-size: 30px;
+        height: fit-content;
+        font-size: 22px;
         color: white;
         margin: 0;
     }
@@ -168,7 +168,6 @@ footer a:hover {
         flex-direction: column;
         align-items: center;
         justify-content: inherit;
-        height: 93vh;
     }
 
     .slider {
@@ -225,7 +224,7 @@ footer a:hover {
         flex: 0 0 auto;
         width: 100vw;
         background-color: #00796B;
-        height: 7vh;
+        height: 10%;
     }
 
     footer a {
