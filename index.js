@@ -1,5 +1,5 @@
 var initial_date = new Date(2020, 9, 22, 9, 0, 0);
-var finish_date = new Date(2021, 2, 31, 0, 0, 0, 0);
+var finish_date = new Date(2022, 2, 31, 0, 0, 0, 0);
 var bcg = setInterval(background, 5000);
 var count = setInterval(date_count, 1000);
 var bg_arr = {
@@ -47,7 +47,7 @@ function date_count() {
         let sec = (result - (Math.trunc(days) * (1000 * 60 * 60 * 24)) - (Math.trunc(hours) * (1000 * 60 * 60)) - (Math.trunc(mins) * (1000 * 60))) / 1000;
         let sec_word = sixty_word(sec, 'секунда', 'секунды', 'секунд')
         document.getElementById('result').innerHTML = `До приезда Димана осталось <br> ${Math.trunc(days)} ${days_word}, 
-${Math.trunc(hours)} ${hours_word} и ${Math.trunc(mins)} ${mins_word} и ${Math.trunc(sec)} ${sec_word}!`;
+${Math.trunc(hours)} ${hours_word}, ${Math.trunc(mins)} ${mins_word} и ${Math.trunc(sec)} ${sec_word}!`;
         count_percent();
     } else if (result <= 0) {
         document.getElementById('result').innerHTML = 'Диман приехал и уже на диване!';

@@ -181,11 +181,7 @@ footer a:hover {
 
     .slidebar {
         width: 50vw;
-        height: 30px;
-        background-color: #CDDC39;
-        border-radius: 25px;
-        border: 5px solid #212121;
-        flex-shrink: 6;
+        height: 15%;
     }
 
     .diman {
@@ -204,11 +200,9 @@ footer a:hover {
     }
 
     .divan {
-        background-image: url("img/divan.png");
         height: 50px;
         width: 80px;
-        background-repeat: no-repeat;
-        background-size: contain;
+
     }
 
     .leipzig {
