@@ -1,5 +1,5 @@
 var initial_date = new Date(2020, 9, 22, 9, 0, 0);
-var finish_date = new Date(2022, 2, 31, 0, 0, 0, 0);
+var finish_date = new Date(2021, 8, 31, 0, 0, 0, 0);
 var bcg = setInterval(background, 5000);
 var count = setInterval(date_count, 1000);
 var bg_arr = {
